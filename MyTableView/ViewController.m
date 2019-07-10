@@ -110,7 +110,8 @@
     }
     NSString *firstString1 = [arrayName objectAtIndex:0];
     NSString *secondString2 = [arrayName objectAtIndex:1];
-    NSString *str = [NSString stringWithFormat: @"%@ %@", firstString1, secondString2];
+    NSString *responseString2 = items[@"products"];
+    NSString *str = [NSString stringWithFormat: @"%@ %@ %@", responseString2, firstString1, secondString2];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"iOS RESTful JSON Demo for iPhone"                                                        message: str                                                    delegate:nil                                              cancelButtonTitle:@"close"                                              otherButtonTitles:nil];
     [alertView show];
     
