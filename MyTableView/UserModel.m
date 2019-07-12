@@ -57,7 +57,7 @@
     }
     */
     if (self.delegate) {
-        [self.delegate itemsDownloaded:jsonDict];
+        [self.delegate itemsDownloaded:jsonDict itemsDowmloaded2:responseString];
     }
 }
 

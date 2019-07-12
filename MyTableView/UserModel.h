@@ -10,7 +10,7 @@
 
 @protocol UserModelProtocol <NSObject>
 
-- (void)itemsDownloaded:(NSDictionary *)items;
+- (void)itemsDownloaded:(NSDictionary *)items itemsDowmloaded2:(NSString *)items2;
 
 @end
 

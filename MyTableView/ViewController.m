@@ -100,8 +100,9 @@
      */
 }
 
--(void)itemsDownloaded:(NSDictionary *)items {
+-(void)itemsDownloaded:(NSDictionary *)items itemsDowmloaded2:(NSString *)items2 {
     // This delegate method will get called when the items are finished downloading when executed on press updateDatabase
+    
     for (id objectsInJsonDict in items[@"products"]){
         responseString3 = [objectsInJsonDict objectForKey:@"name"];
         [arrayPid addObject:[objectsInJsonDict objectForKey:@"pid"]];
@@ -112,7 +113,9 @@
     NSString *secondString2 = [arrayName objectAtIndex:1];
     NSString *responseString2 = items[@"products"];
     NSString *str = [NSString stringWithFormat: @"%@ %@ %@", responseString2, firstString1, secondString2];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"iOS RESTful JSON Demo for iPhone"                                                        message: str                                                    delegate:nil                                              cancelButtonTitle:@"close"                                              otherButtonTitles:nil];
+
+    responseString3 = [NSString stringWithFormat: @"%@", [items objectForKey:@"products"]];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"RESTful JSON"                                                        message: items2                                                    delegate:nil                                              cancelButtonTitle:@"close"                                              otherButtonTitles:nil];
     [alertView show];
     
     
